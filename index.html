@@ -1,0 +1,6 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dodaj pytanie do gry</title>
+<style>body{margin:0;background:#0f0b1e;color:#f3f0ff;font:16px system-ui,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:20px}a{color:#ff4d8d}</style></head>
+<body><div><h2>Przekierowuję do formularza...</h2><p id="m">Chwila.</p></div>
+<script>
+fetch('link.json?'+Date.now()).then(r=>r.json()).then(d=>{if(d.url){location.replace(d.url)}else throw 0}).catch(()=>{document.getElementById('m').textContent='Formularz chwilowo niedostępny. Spróbuj za kilka minut.'});
+</script></body></html>
